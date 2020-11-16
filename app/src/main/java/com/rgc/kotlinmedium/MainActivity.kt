@@ -11,6 +11,9 @@ class MainActivity : AppCompatActivity() {
         // Enum Classes -> Clases enumeradoras
         enumClasses()
 
+        // Clases Anidadas e internas
+        MyNestedInnerClasses()
+
     }
 
     /**
@@ -67,5 +70,22 @@ class MainActivity : AppCompatActivity() {
         println("El parametro correspondiente al valor String actual es ${tableColor.car}")
 
     }
+
+    /**
+     * Classes anidadas (Nested) y internas (Inner)
+     */
+    fun MyNestedInnerClasses() {
+        // Class Anidada
+        val myNestedClass = MyNestedAndInnerClasses.MyNestedClass()
+        val sum = myNestedClass.sum(40, 3)
+        println("El resultado es ${sum}")
+
+        //Class Interna
+        val myInnnerClass = MyNestedAndInnerClasses().MyInnerClass()
+        val sumTwo = myInnnerClass.sumTwo(4)
+        println("El resultado es ${sumTwo}")
+    }
+
+
 
 }
