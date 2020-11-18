@@ -14,6 +14,9 @@ class MainActivity : AppCompatActivity() {
         // Clases Anidadas e internas
         MyNestedInnerClasses()
 
+        // Herencia de Classes
+        MyHerenciaClass()
+
     }
 
     /**
@@ -84,6 +87,25 @@ class MainActivity : AppCompatActivity() {
         val myInnnerClass = MyNestedAndInnerClasses().MyInnerClass()
         val sumTwo = myInnnerClass.sumTwo(4)
         println("El resultado es ${sumTwo}")
+    }
+
+    /**
+     * Herencia de clases y clases Abstractas
+     */
+    fun MyHerenciaClass() {
+
+        val myPersona = Persona("Lola", 34)
+        myPersona.work()
+        myPersona.myTiempo()
+
+        val conductor = Conductor("Roberto", 40, "pescar")
+        conductor.work()
+        conductor.myTiempo()
+
+        val informatico = Informatico("Juan", 34)
+        informatico.work()
+        informatico.myTiempo()
+
     }
 
 
