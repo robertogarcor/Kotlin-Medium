@@ -11,8 +11,13 @@ package com.rgc.kotlinmedium
  * Una clase no puede heredar de varias clases igual que en Java, para ello es necesario
  * hacer uso de Interfaces.
  *
+ * La clase Persona implementa la interface Programar. Esta accion da lugar a que debemos
+ * implementar todas su variables y sus metodos (por obligación solo aquellos que no
+ * tienen definido un estado). Aquellos metodos que tienen definido un estado pueden ser
+ * implementados y asi sobreescribir su estado por defecto
+ *
  */
-open class Persona(name: String, edad: Int) : Pasatiempo() {
+open class Persona(name: String, edad: Int) : Pasatiempo(), Programar {
 
     /**
      * Metodo clase persona. Para poder sobreescribir es tambien necesario incluir
@@ -32,6 +37,16 @@ open class Persona(name: String, edad: Int) : Pasatiempo() {
      */
     override fun toString(): String {
         return super.toString()
+    }
+
+    // Interface Programar
+    // El metodo testeando al tener un estado no es necesario implementarlo,
+    // solo si queremos sobreescribirlo
+
+    override var lenguaje: String = "JAVA"
+
+    override fun programando() {
+        println("Estoy programado en el lenguaje $lenguaje")
     }
 
 }

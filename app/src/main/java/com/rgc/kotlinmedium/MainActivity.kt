@@ -17,6 +17,9 @@ class MainActivity : AppCompatActivity() {
         // Herencia de Classes
         MyHerenciaClass()
 
+        // Intefaces
+        MyInterfaceClass()
+
     }
 
     /**
@@ -105,6 +108,17 @@ class MainActivity : AppCompatActivity() {
         val informatico = Informatico("Juan", 34)
         informatico.work()
         informatico.myTiempo()
+
+    }
+
+    /**
+     * Interfaces Class en Kotlin
+     */
+    fun MyInterfaceClass() {
+
+        val persona = Persona("Pepe", 30)
+        persona.programando()
+        persona.testeando()
 
     }
 
